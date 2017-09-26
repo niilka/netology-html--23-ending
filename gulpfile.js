@@ -12,7 +12,8 @@ var gulp           = require('gulp'),
 		del            = require('del'),
 		notify         = require("gulp-notify"),
 		pug            = require("gulp-pug"),
-		rimraf         = require('rimraf');
+		rimraf         = require('rimraf'),
+		ngrok          = require('ngrok');
 		
 // Сервер и автообновление страницы Browsersync
 gulp.task('browser-sync', function() {
@@ -78,7 +79,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('pug', function() {
-	return gulp.src('app/pug/*.pug')
+	return gulp.src('app/*.pug')
 	.pipe(pug({
 		pretty: true
 	}))
@@ -90,7 +91,7 @@ gulp.task('pug', function() {
 gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/pug/*.pug', ['pug'], browserSync.reload);
+	gulp.watch('app/*.pug', ['pug'], browserSync.reload);
 });
 
 gulp.task('new', function(cb){

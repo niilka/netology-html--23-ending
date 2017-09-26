@@ -1,0 +1,56 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title Title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    style.
+      body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }
+  body
+    link(rel='stylesheet', href='css/main.min.css')
+    script(src='js/scripts.min.js')
+    header.site-header
+      .container.header-line-content
+        img.logotype(alt='Mogo', src='img/logotype.png')
+        nav.site-navigation
+          ul
+            li
+              a(href='#') About
+            li
+              a(href='#') Service
+            li
+              a(href='#') Work
+            li
+              a(href='#') Blog
+            li
+              a(href='#') Contact
+            li
+              a.icon-cart(href='#')
+            li
+              a.icon-search(href='#')
+      .container.header-title-content
+        h2.sub-title Creative Template
+        h1.title Welcome
+          br
+          | to Mogo
+        a.header-button(href="#") Learn more
+      .container.progress-wrapper
+        .intro
+          .progress-bar
+          p.progress-name 01
+            span Intro
+        .work
+          .progress-bar
+          p.progress-name 02
+            span Work
+        .about
+          .progress-bar
+          p.progress-name 03
+            span About
+        .contacts
+          .progress-bar
+          p.progress-name 04
+            span Contacts
+
