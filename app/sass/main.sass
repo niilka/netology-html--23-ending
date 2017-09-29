@@ -11,69 +11,68 @@
 body
   overflow: hidden
 .container
-  max-width: 1078px
+  max-width: 1160px
   margin: 0 auto
   .col
-    width: 50%
-    float: left
+    width: 49%
+    display: inline-block
+    letter-spacing: -36em
 
 .site-header
-  font-size: 0
-  background-color: #eceef4
-  .header-top  
-    height: 63px
+  .header-top-line
+    background-color: #eceef4
+
     .left-links
-      display: inline-block
-      font-weight: 700
-      
       ul
+        list-style-type: none
         li
           display: inline-block
           background-color: #fff
-          margin: 15.5px 0
-          text-align: center
           background-repeat: no-repeat
           background-position: 8px
-          border-radius: 2px
-          margin-right: 5px
-          width: 98.5px
+          padding: 3px 0
+          margin: 15.5px 0
+          &:not(:first-child)
+            margin-left: 5px
+          border-radius: 3px
           &:nth-child(1)
             background-image: url("../img/header/left-links/blog.svg")
             a
-              padding-left: 49px
+              padding-left: 47px
+              padding-right: 26px
           &:nth-child(2)
             background-image: url("../img/header/left-links/jobs.svg")
             a
-              padding-left: 49px
+              padding-left: 47px
+              padding-right: 27px
           &:nth-child(3)
             background-image: url("../img/header/left-links/support.svg")
             a
               padding-left: 39px
+              padding-right: 13px
           &:nth-child(4)
             background-image: url("../img/header/left-links/language.svg")
             a
-              padding-left: 45px
+              padding-left: 44px
+              padding-right: 19px
           a
-            display: inline-block
             text-decoration: none
-            padding: 6.6px 10px
-            padding-right: 26px
             color: #6d6e71
+            font-weight: 700
             font-size: 12px
+            letter-spacing: 0
     .right-links
-      display: inline-block 
-      height: 100%
+
       ul
-        height: 100%
+        list-style-type: none
+        text-align: right
         li
           display: inline-block
-          height: 100%
-          border-left: 2px solid red
+          text-align: left
           a
+            font-size: 12px
+            letter-spacing: 0
             text-decoration: none
-            font-size: 12px  
-            
-            
+            background-repeat: no-repeat
 
-          
 @import "media" // Всегда в конце
