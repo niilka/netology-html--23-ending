@@ -10,18 +10,27 @@
   font-family: $default-font
 body
   overflow: hidden
+
+.clearfix
+  content: ""
+  display: block
+  clear: both
+
 .container
   max-width: 1160px
   margin: 0 auto
+  letter-spacing: -36em
   .col
-    width: 49%
+    width: 50%
     display: inline-block
     letter-spacing: -36em
+    vertical-align: top
 
 .site-header
   .header-top-line
     background-color: #eceef4
-
+    height: 63px
+   
     .left-links
       ul
         list-style-type: none
@@ -31,7 +40,12 @@ body
           background-repeat: no-repeat
           background-position: 8px
           padding: 3px 0
-          margin: 15.5px 0
+          margin: 15.5px 0 //TODO Fix
+          &:hover
+            background-color: lighten($accent--color, 30%)
+            a
+              color: #fff
+             
           &:not(:first-child)
             margin-left: 5px
           border-radius: 3px
@@ -62,17 +76,47 @@ body
             font-size: 12px
             letter-spacing: 0
     .right-links
-
+      height: 62px
       ul
         list-style-type: none
         text-align: right
+        height: 100%
         li
           display: inline-block
           text-align: left
+          border-left: 1px solid #dee0e6
+          padding-right: 20px
+          padding-left: 20px
+          height: 100%
+          vertical-align: middle
+          
+          &:not(last-child)
+            padding-right: 19px
+          &:last-child
+            border-right: 1px solid #dee0e6
+          &:nth-child(1)
+            a
+              background-image: url("../img/header/right-links/facebook.svg")
+          &:nth-child(2)
+            a
+              background-image: url("../img/header/right-links/twitter.svg")
+          &:nth-child(3)
+            a
+              background-image: url("../img/header/right-links/instagram.svg")
+          &:nth-child(4)
+            a
+              background-image: url("../img/header/right-links/gplus.svg")
+              
           a
+            display: inline-block
+            width: 25px
+            height: 100%
+            background-position: center
+            background-repeat: no-repeat
             font-size: 12px
             letter-spacing: 0
             text-decoration: none
             background-repeat: no-repeat
+            
 
 @import "media" // Всегда в конце
