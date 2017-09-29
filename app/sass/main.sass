@@ -129,8 +129,19 @@ body
         li
           display: inline-block
           padding-left: 40px
-          &:first-child
-            padding-left: 10px
+          position: relative
+          &:nth-child(2)
+            padding-left: 44px
+          &:not(:last-child)::after
+            content: ""
+            position: absolute
+            top: 6px
+            right: -22px
+            width: 1px
+            height: 24px
+            background-color: #bcbec3
+          &:nth-child(2)::after
+            right: -18px
           a
             display: inline-block
             letter-spacing: 0px
