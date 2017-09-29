@@ -6,8 +6,74 @@
 
 // Пользовательские стили
 
+*
+  font-family: $default-font
+body
+  overflow: hidden
 .container
-  max-width: 1200px
+  max-width: 1078px
   margin: 0 auto
+  .col
+    width: 50%
+    float: left
 
+.site-header
+  font-size: 0
+  background-color: #eceef4
+  .header-top  
+    height: 63px
+    .left-links
+      display: inline-block
+      font-weight: 700
+      
+      ul
+        li
+          display: inline-block
+          background-color: #fff
+          margin: 15.5px 0
+          text-align: center
+          background-repeat: no-repeat
+          background-position: 8px
+          border-radius: 2px
+          margin-right: 5px
+          width: 98.5px
+          &:nth-child(1)
+            background-image: url("../img/header/left-links/blog.svg")
+            a
+              padding-left: 49px
+          &:nth-child(2)
+            background-image: url("../img/header/left-links/jobs.svg")
+            a
+              padding-left: 49px
+          &:nth-child(3)
+            background-image: url("../img/header/left-links/support.svg")
+            a
+              padding-left: 39px
+          &:nth-child(4)
+            background-image: url("../img/header/left-links/language.svg")
+            a
+              padding-left: 45px
+          a
+            display: inline-block
+            text-decoration: none
+            padding: 6.6px 10px
+            padding-right: 26px
+            color: #6d6e71
+            font-size: 12px
+    .right-links
+      display: inline-block 
+      height: 100%
+      ul
+        height: 100%
+        li
+          display: inline-block
+          height: 100%
+          border-left: 2px solid red
+          a
+            text-decoration: none
+            font-size: 12px  
+            
+            
+
+          
 @import "media" // Всегда в конце
