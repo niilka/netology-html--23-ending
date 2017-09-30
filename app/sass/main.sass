@@ -41,8 +41,18 @@ body
           background-position: 8px
           padding: 3px 0
           margin: 15.5px 0 //TODO Fix
+          transition: background ease-out 0.2s
           &:hover
-            background-color: lighten($accent--color, 30%)
+            transition: background ease-out 0.2s
+            background-color: $accent--color
+            &:nth-child(1)
+              background-image: url("../img/header/left-links/blog-white.svg")
+            &:nth-child(2)
+              background-image: url("../img/header/left-links/jobs-white.svg")
+            &:nth-child(3)
+              background-image: url("../img/header/left-links/support-white.svg")
+            &:nth-child(4)
+              background-image: url("../img/header/left-links/language-white.svg")
             a
               color: #fff
              
@@ -90,6 +100,7 @@ body
           height: 100%
           vertical-align: middle
           
+
           &:not(last-child)
             padding-right: 19px
           &:last-child
@@ -120,6 +131,8 @@ body
   .header-middle-line
     .logo-wrapper
       margin-top: 61px
+      .logotype
+        margin-left: -18px
     .nav-links
       margin-top: 126px
       ul
@@ -130,6 +143,18 @@ body
           display: inline-block
           padding-left: 40px
           position: relative
+          &:hover
+            a
+             transition: background ease-out 0.2s
+            &:nth-child(1)
+              a
+                background-image: url("../img/header/nav-links/phone-blue.svg")
+            &:nth-child(2)
+              a
+                background-image: url("../img/header/nav-links/nav-blue.svg")
+            &:nth-child(3)
+              a
+                background-image: url("../img/header/nav-links/mail-blue.svg")
           &:nth-child(2)
             padding-left: 44px
           &:not(:last-child)::after
@@ -150,16 +175,58 @@ body
             background-position: 0
             width: 30px
             height: 35px
+            transition: background ease-out 0.2s
+            position: relative
           &:nth-child(1)
             a
               background-image: url("../img/header/nav-links/phone.svg")
           &:nth-child(2)
+            .popup
+              border: 2px solid #d4d4d5
+              position: absolute
+              width: 226px
+              height: 51px
+              text-align: center
+              border-radius: 2px
+              top: -70px
+              left: -58px
+              .message
+                letter-spacing: 0
+                font-size: 16px
+                font-weight: 700
+                padding-top: 10px
             a
               background-image: url("../img/header/nav-links/nav.svg")
           &:nth-child(3)
             a
               background-image: url("../img/header/nav-links/mail.svg")
 
-          
+  .header-bottom-line
+    height: 86px
+    border-top: 1px solid #eceef4
+    border-bottom: 1px solid #eceef4
+    margin-top: 49px
+    .site-nav
+      height: 100%   
+      ul
+        list-style-type: none
+        height: 100% 
+        li
+          display: inline-block
+          font-weight: 700
+          text-align: center
+          height: 100% 
+          &:not(:last-child)
+            border-right: 1px solid #eceef4
+          a
+            letter-spacing: 0
+            text-decoration: none     
+            font-size: 13px
+            display: inline-block
+            padding-top: 37px
+            padding-left: 14px
+            padding-right: 20px
+            color: #6d6e71
+            text-underline-position: 
 
 @import "media" // Всегда в конце
