@@ -30,7 +30,7 @@ body
   .header-top-line
     background-color: #eceef4
     height: 63px
-   
+
     .left-links
       ul
         list-style-type: none
@@ -55,7 +55,7 @@ body
               background-image: url("../img/header/left-links/language-white.svg")
             a
               color: #fff
-             
+
           &:not(:first-child)
             margin-left: 5px
           border-radius: 3px
@@ -99,7 +99,7 @@ body
           padding-left: 20px
           height: 100%
           vertical-align: middle
-          
+
 
           &:not(last-child)
             padding-right: 19px
@@ -117,7 +117,7 @@ body
           &:nth-child(4)
             a
               background-image: url("../img/header/right-links/gplus.svg")
-              
+
           a
             display: inline-block
             width: 25px
@@ -206,27 +206,81 @@ body
     border-top: 1px solid #eceef4
     border-bottom: 1px solid #eceef4
     margin-top: 49px
+
     .site-nav
-      height: 100%   
+      height: 100%
+
       ul
         list-style-type: none
-        height: 100% 
+        height: 100%
+        display: inline-block
         li
           display: inline-block
-          font-weight: 700
           text-align: center
-          height: 100% 
+          height: 100%
+          position: relative
+          &:hover
+            a
+              color: $accent--color
+            &::after
+              display: block
+              margin: 0 auto
+              position: absolute
+              bottom: -1px
+              width: 10px
+              top: 0
+              left: 0
+              right: 0
+              content: ""
+              border: 20px solid transparent
+              border-bottom: 8px solid $accent--color
           &:not(:last-child)
             border-right: 1px solid #eceef4
+          &:first-child
+            text-transform: uppercase
+            padding-left: 13px
+          &:nth-child(2) a
+            padding-right: 21px
+            padding-left: 21px
+          &:nth-child(3) a
+            padding-right: 25px
+            padding-left: 24px
+          &:nth-child(4) a
+            padding-right: 26px
+            padding-left: 26px
+          &:nth-child(5) a
+            padding-right: 28px
+            padding-left: 26px
+          &:nth-child(6) a
+            padding-right: 27px
+            padding-left: 27px
+
           a
             letter-spacing: 0
-            text-decoration: none     
+            text-decoration: none
             font-size: 13px
             display: inline-block
-            padding-top: 37px
-            padding-left: 14px
+            //padding-top: 34px
+            line-height: 86px
             padding-right: 20px
             color: #6d6e71
-            text-underline-position: 
+            font-weight: 700
+    .search-wrapper
+      display: inline-block
+      float: right
+      position: relative
+      .search-field
+        border: none
+        outline: none
+        font-weight: 300
+        font-size: 15px
+        margin-right: 5px
+        line-height: 84px
+      .search-icon
+        margin-right: 14px
+        position: absolute
+        left: -40px
+        top: 29px
+
 
 @import "media" // Всегда в конце
