@@ -287,25 +287,38 @@ body
   position: relative
   z-index: 1
   height: 889px
-  margin-top: 302px
+  padding-top: 198px
   background-image: url("../img/main/background.png")
   background-repeat: no-repeat
   background-size: cover
   background-position: -43px
-  width: 100vw
+  width: 100%
+  text-align: center
   .title-wrapper
-    text-align: center
-    margin-top: 800px
+    display: inline-block
     position: relative
     .title
+      // NOTE: Shadow
+      position: relative
+      z-index: 1
       color: #fff
       font-family: "Open Sans"
       font-weight: 700
       font-size: 58px
-      margin-left: -94px
+      margin-left: -101px
     .amp
       position: absolute
-      top: 0
+      top: 19px
       left: 0
-      font-size: 50px
+      font-size: 120px
+      font-weight: 700
+      color: #bbedff
+      z-index: 0
+    .sub-title
+      font-size: 45px
+      font-weight: 300
+      color: #fff
+      margin-top: -63px
+      margin-left: 105px
+
 @import "media" // Всегда в конце
