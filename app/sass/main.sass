@@ -1,11 +1,11 @@
+// Includes
 @import "fonts"
 @import "libs"
 @import "base"
 @import "vars"
 @import "reset"
 
-// Пользовательские стили
-
+// User styles
 *
   font-family: $default-font
 body
@@ -44,7 +44,7 @@ body
           transition: background ease-out 0.2s
           &:hover
             transition: background ease-out 0.2s
-            background-color: $accent--color
+            background-color: $accent-color
             &:nth-child(1)
               background-image: url("../img/header/left-links/blog-white.svg")
             &:nth-child(2)
@@ -200,7 +200,6 @@ body
           &:nth-child(3)
             a
               background-image: url("../img/header/nav-links/mail.svg")
-
   .header-bottom-line
     height: 86px
     border-top: 1px solid #eceef4
@@ -221,7 +220,7 @@ body
           position: relative
           &:hover
             a
-              color: $accent--color
+              color: $accent-color
             &::after
               display: block
               margin: 0 auto
@@ -233,7 +232,7 @@ body
               right: 0
               content: ""
               border: 20px solid transparent
-              border-bottom: 8px solid $accent--color
+              border-bottom: 8px solid $accent-color
           &:not(:last-child)
             border-right: 1px solid #eceef4
           &:first-child
