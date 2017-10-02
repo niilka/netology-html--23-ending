@@ -9,7 +9,7 @@
 *
   font-family: $default-font
 body
-  overflow: hidden
+  //overflow: hidden
 
 .clearfix
   content: ""
@@ -72,13 +72,13 @@ body
           &:nth-child(3)
             background-image: url("../img/header/left-links/support.svg")
             a
-              padding-left: 39px
+              padding-left: 37px
               padding-right: 13px
           &:nth-child(4)
             background-image: url("../img/header/left-links/language.svg")
             a
-              padding-left: 44px
-              padding-right: 19px
+              padding-left: 43px
+              padding-right: 17px
           a
             text-decoration: none
             color: #6d6e71
@@ -245,7 +245,7 @@ body
             padding-right: 25px
             padding-left: 24px
           &:nth-child(4) a
-            padding-right: 26px
+            padding-right: 27px
             padding-left: 26px
           &:nth-child(5) a
             padding-right: 28px
@@ -290,7 +290,7 @@ body
   background-image: url("../img/main/background.png")
   background-repeat: no-repeat
   background-size: cover
-  background-position: -43px
+  background-position: -52px
   width: 100%
   text-align: center
   .title-wrapper
@@ -320,4 +320,56 @@ body
       margin-top: -63px
       margin-left: 105px
 
+.slider-wrapper
+  margin-top: 138px
+  width: 100vw
+  text-align: right
+  .slider
+    display: inline-block
+    margin-right: 394px
+    .slider-image-wrapper
+      text-align: center
+      height: 241px
+      float: left
+      position: relative
+      &:nth-child(1)
+        .like-wrapper
+          background-color: rgba(138,202,81,0.9)
+          .like-button
+            background-image: url("../img/main/slider/like-1.svg")
+      &:nth-child(2)
+        .like-wrapper
+          background-color: rgba(254,235,117,0.9)
+          
+          .like-button
+            color: #cc9800
+            background-image: url("../img/main/slider/like-2.svg")
+    .slider-arrow
+      width: 107px
+      height: 241px
+      float: left
+      background-image: url("../img/main/slider/arrow.svg")
+      background-repeat: no-repeat
+      background-position: center
+      background-color: #f4f4f4
+      cursor: pointer
+    .like-wrapper
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 65px
+      .like-button
+        display: inline-block
+        width: 100%
+        line-height: 65px
+        background-repeat: no-repeat
+        background-position: 126px 18px
+        cursor: pointer
+        text-decoration: none
+        color: #ffffff
+        padding-left: 44px
+        font-size: 14px
+        font-weight: 600
+      
 @import "media" // Всегда в конце
