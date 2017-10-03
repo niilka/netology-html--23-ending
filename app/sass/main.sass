@@ -430,7 +430,7 @@ body
     background-position: -3px 1px
     padding-left: 161px
     color: #6d6e71
-    
+    padding-bottom: 15px
     .title
       font-size: 44px
       font-weight: 700
@@ -442,9 +442,63 @@ body
       padding-top: 5px
       font-size: 17px
       font-weight: 300
-      
-  .features-left
-    letter-spacing: 0 
-  .features-right
-    letter-spacing: 0 
+  .features-grid   
+    margin-top: 82px   
+    &>*
+      letter-spacing: 0 
+      .feature
+        background-repeat: no-repeat
+        background-position: -1px 9px
+        text-align: left
+        color: #6d6e71
+        .text-wrapper
+          width: 387px
+        
+    .features-left
+      position: relative
+      &::after
+        content: ""
+        display: block
+        position: absolute
+        top: -6px
+        right: 15px
+        width: 1px
+        height: 596px
+        background-color: #eaeced
+      .feature
+        margin-bottom: 90px
+        .text-wrapper
+          margin-left: 114px
+          .feature-description
+            padding-top: 13px
+            line-height: 1.5
+            word-spacing: 1px
+            word-break: break-all
+        &:nth-child(1)
+          background-image: url("../img/features-section/feature-1.png")
+        &:nth-child(2)
+          background-image: url("../img/features-section/feature-2.png")
+          margin-bottom: 84px
+        &:nth-child(3)
+          background-image: url("../img/features-section/feature-3.png")
+
+    .features-right
+      .feature
+        .text-wrapper
+          margin-left: 192px
+        .feature-description
+          padding-top: 13px
+          line-height: 1.5
+          word-spacing: 1px
+        &:nth-child(1)
+          background-image: url("../img/features-section/feature-4.png")
+          background-position: 96px 9px
+          margin-bottom: 88px
+        &:nth-child(2)
+          background-image: url("../img/features-section/feature-5.png")
+          background-position: 80px 5px
+          margin-bottom: 87px
+        &:nth-child(3)
+          background-image: url("../img/features-section/feature-6.png")
+          background-position: 95px 8px
 @import "media" // Всегда в конце
