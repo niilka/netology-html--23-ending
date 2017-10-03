@@ -326,7 +326,7 @@ body
   text-align: right
   .slider
     display: inline-block
-    margin-right: 394px
+    margin-right: 391px
     .slider-image-wrapper
       text-align: center
       height: 241px
@@ -345,7 +345,7 @@ body
             color: #cc9800
             background-image: url("../img/main/slider/like-2.svg")
     .slider-arrow
-      width: 107px
+      width: 110px
       height: 241px
       float: left
       background-image: url("../img/main/slider/arrow.svg")
@@ -373,6 +373,10 @@ body
         font-weight: 600
 
 .about-section
+  background-image: url("../img/about-section/divide.svg")
+  background-repeat: no-repeat
+  background-position: bottom center
+  padding-bottom: 106px
   .section-title
     font-size: 26px
     font-weight: 700
@@ -385,18 +389,33 @@ body
     padding-top: 26px
   .info-block
     letter-spacing: 0px
-    background-repeat: no-repeat
-    background-position: top left
+    background-repeat: no-repeat  
     &:nth-child(1)
       background-image: url("../img/about-section/lamp.png")
+      background-position: top left
+      .text-wrapper
+        margin-left: 135px
+        margin-top: 12px
+        .section-article
+          padding-top: 13px
+         
     &:nth-child(2)
       background-image: url("../img/about-section/tree.png")
+      background-position: 62px 0px
+      text-align: right
+      .text-wrapper
+        text-align: left
+        margin-top: 12px
+        .section-article
+          padding-top: 13px
+         
     .text-wrapper
-     margin-left: 135px
-     margin-top: 11px
-     width: 389px
-     letter-spacing: 0.2px
-     line-height: 1.5
-     .section-article
-      padding-top: 13px
+      display: inline-block
+      width: 386px
+      letter-spacing: 0px
+      line-height: 1.5
+      .section-article
+         word-break: break-all
+         word-spacing: 4px
+     
 @import "media" // Всегда в конце
