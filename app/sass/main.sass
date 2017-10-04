@@ -543,7 +543,7 @@ body
       padding-left: 172px
       padding-top: 18px
       height: 160px
-      margin-bottom: 72px
+      margin-bottom: 69px
       .title
         font-size: 44px
         font-weight: 700
@@ -562,11 +562,89 @@ body
         display: inline-block
         border: 2px solid #cecece
         border-radius: 5px
-        padding: 5px 10px
+        margin-right: 14px
+        transition: all 0.2s ease-out
+        &:nth-child(1)
+          padding: 7px 49px
+          margin-left: 12px
+          margin-right: 11px
+        &:nth-child(2)
+          padding: 7px 31px
+          margin-right: 10px
+        &:nth-child(3)
+          padding: 7px 41px
+          margin-right: 9px
+        &:nth-child(4)
+          padding: 7px 20px
+          margin-right: 10px
+        &:nth-child(5)
+          padding: 7px 27px
+        &:hover,&:active
+          transition: all 0.2s ease-out
+          background-color: #fff
+          border: 2px solid #fff
+          a
+            color: #6d6e71
         a
           text-decoration: none
           font-size: 15px
           font-weight: 700
           color: #bbbbbb
-        
+
+    .projects-portfolio
+      margin-top: 51px
+      margin-left: -8px
+      &::after
+        content: ""
+        display: block
+        clear: both
+      .project
+        display: inline-block
+        vertical-align: top
+        float: left
+        width: 25%   
+        text-align: center
+        margin-bottom: 9px
+        .project-wrapper
+          display: inline-block
+          width: 278px
+          height: 284px
+          background-color: #fff
+          border-radius: 4px
+          .image-wrapper
+            width: 252px
+            height: 209px
+            margin-top: 16px
+            background-color: #f5f5f5
+            display: inline-block
+            border-radius: 4px
+            overflow: hidden
+            .project-image
+
+          .buttons-wrapper
+            height: 59px
+            margin-top: -7px
+            .share
+              background-image: url("../img/projects-section/share.svg")
+              background-repeat: no-repeat
+              background-position: center 18px
+              width: 50%
+              height: 59px
+              display: inline-block
+              position: relative
+              &::after
+                content: ""
+                position: absolute
+                width: 1px
+                height: 59px
+                right: 0px
+                background-color: #efefef
+
+            .more
+              background-image: url("../img/projects-section/more.svg")
+              background-repeat: no-repeat
+              background-position: 50px 16px
+              width: 50%
+              height: 59px
+              display: inline-block
 @import "media" // Всегда в конце
