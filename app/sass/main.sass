@@ -4,61 +4,37 @@
 @import "base"
 @import "vars"
 @import "reset"
-
+@import "png-sprites"
 // User styles
-*
-  font-family: $default-font
-body
-  //overflow: hidden
-
-.clearfix
-  content: ""
-  display: block
-  clear: both
 
 .container
   max-width: 1160px
   margin: 0 auto
-  letter-spacing: -36em
+  font-size: 0
   .col
     width: 50%
     display: inline-block
-    letter-spacing: -36em
+    font-size: 0  
     vertical-align: top
 
 .site-header
   .header-top-line
-    background-color: #eceef4
     height: 63px
-
+    background-color: #eceef4
     .left-links
       ul
+        padding-top: 17px
         list-style-type: none
         li
           display: inline-block
+          padding: 6px 0
           background-color: #fff
           background-repeat: no-repeat
           background-position: 8px
-          padding: 3px 0
-          margin: 15.5px 0 //TODO Fix
           transition: background ease-out 0.2s
-          &:hover
-            transition: background ease-out 0.2s
-            background-color: $accent-color
-            &:nth-child(1)
-              background-image: url("../img/header/left-links/blog-white.svg")
-            &:nth-child(2)
-              background-image: url("../img/header/left-links/jobs-white.svg")
-            &:nth-child(3)
-              background-image: url("../img/header/left-links/support-white.svg")
-            &:nth-child(4)
-              background-image: url("../img/header/left-links/language-white.svg")
-            a
-              color: #fff
-
+          border-radius: 3px
           &:not(:first-child)
             margin-left: 5px
-          border-radius: 3px
           &:nth-child(1)
             background-image: url("../img/header/left-links/blog.svg")
             a
@@ -81,25 +57,45 @@ body
               padding-right: 17px
           a
             text-decoration: none
-            color: #6d6e71
+            color: $font-color
             font-weight: 700
             font-size: 12px
             letter-spacing: 0
+          &:hover
+            transition: background ease-out 0.2s
+            background-color: $accent-color
+            &:nth-child(1)
+              background-image: url("../img/header/left-links/blog-white.svg")
+            &:nth-child(2)
+              background-image: url("../img/header/left-links/jobs-white.svg")
+            &:nth-child(3)
+              background-image: url("../img/header/left-links/support-white.svg")
+            &:nth-child(4)
+              background-image: url("../img/header/left-links/language-white.svg")
+            a
+              color: #ffffff
+
     .right-links
-      height: 62px
+      height: 63px
       ul
+        height: 100%
         list-style-type: none
         text-align: right
-        height: 100%
         li
           display: inline-block
-          text-align: left
           border-left: 1px solid #dee0e6
-          padding-right: 20px
-          padding-left: 20px
+          padding: 0 20px
           height: 100%
-          vertical-align: middle
-
+          a
+            display: inline-block
+            width: 25px
+            height: 100%
+            background-position: center
+            background-repeat: no-repeat
+            font-size: 12px
+            letter-spacing: 0
+            text-decoration: none
+            background-repeat: no-repeat
 
           &:not(last-child)
             padding-right: 19px
@@ -117,24 +113,14 @@ body
           &:nth-child(4)
             a
               background-image: url("../img/header/right-links/gplus.svg")
-
-          a
-            display: inline-block
-            width: 25px
-            height: 100%
-            background-position: center
-            background-repeat: no-repeat
-            font-size: 12px
-            letter-spacing: 0
-            text-decoration: none
-            background-repeat: no-repeat
+       
   .header-middle-line
+    margin-top: 61px
     .logo-wrapper
-      margin-top: 61px
       .logotype
         margin-left: -18px
     .nav-links
-      margin-top: 126px
+      margin-top: 65px
       ul
         list-style-type: none
         text-align: right
@@ -143,18 +129,17 @@ body
           display: inline-block
           padding-left: 40px
           position: relative
-          &:hover
-            a
-             transition: background ease-out 0.2s
-            &:nth-child(1)
-              a
-                background-image: url("../img/header/nav-links/phone-blue.svg")
-            &:nth-child(2)
-              a
-                background-image: url("../img/header/nav-links/nav-blue.svg")
-            &:nth-child(3)
-              a
-                background-image: url("../img/header/nav-links/mail-blue.svg")
+          a
+            display: inline-block
+            letter-spacing: 0px
+            text-decoration: none
+            background-repeat: no-repeat
+            background-position: 0
+            width: 30px
+            height: 35px
+            transition: background ease-out 0.2s
+            position: relative
+
           &:nth-child(2)
             padding-left: 44px
           &:not(:last-child)::after
@@ -167,16 +152,7 @@ body
             background-color: #bcbec3
           &:nth-child(2)::after
             right: -18px
-          a
-            display: inline-block
-            letter-spacing: 0px
-            text-decoration: none
-            background-repeat: no-repeat
-            background-position: 0
-            width: 30px
-            height: 35px
-            transition: background ease-out 0.2s
-            position: relative
+          
           &:nth-child(1)
             a
               background-image: url("../img/header/nav-links/phone.svg")
@@ -200,24 +176,51 @@ body
           &:nth-child(3)
             a
               background-image: url("../img/header/nav-links/mail.svg")
+
+          &:hover
+            a
+             transition: background ease-out 0.2s
+            &:nth-child(1)
+              a
+                background-image: url("../img/header/nav-links/phone-blue.svg")
+            &:nth-child(2)
+              a
+                background-image: url("../img/header/nav-links/nav-blue.svg")
+            &:nth-child(3)
+              a
+                background-image: url("../img/header/nav-links/mail-blue.svg")
+          
   .header-bottom-line
     height: 86px
     border-top: 1px solid #eceef4
     border-bottom: 1px solid #eceef4
-    margin-top: 49px
-
+    margin-top: 56px
     .site-nav
-      height: 100%
+      &::after
+        content: ""
+        display: block
+        clear: both
 
+      height: 100%
       ul
         list-style-type: none
         height: 100%
-        display: inline-block
+        float: left
         li
           display: inline-block
           text-align: center
           height: 100%
           position: relative
+          a
+            letter-spacing: 0
+            text-decoration: none
+            font-size: 13px
+            display: inline-block
+            line-height: 86px
+            padding-right: 20px
+            color: $font-color
+            font-weight: 700
+
           &:hover
             a
               color: $accent-color
@@ -225,7 +228,7 @@ body
               display: block
               margin: 0 auto
               position: absolute
-              bottom: -1px
+              bottom: -3px
               width: 10px
               top: 0
               left: 0
@@ -254,16 +257,6 @@ body
             padding-right: 27px
             padding-left: 27px
 
-          a
-            letter-spacing: 0
-            text-decoration: none
-            font-size: 13px
-            display: inline-block
-            //padding-top: 34px
-            line-height: 86px
-            padding-right: 20px
-            color: #6d6e71
-            font-weight: 700
     .search-wrapper
       display: inline-block
       float: right
@@ -281,16 +274,15 @@ body
         position: absolute
         left: -40px
         top: 29px
-//////////////////////////////
-.main
+
+.top-section
   position: relative
   z-index: 1
   height: 889px
   padding-top: 198px
   background-image: url("../img/main/background.png")
   background-repeat: no-repeat
-  background-size: cover
-  background-position: -52px
+  background-position: -50px
   width: 100%
   text-align: center
   .title-wrapper
@@ -322,11 +314,10 @@ body
 
 .slider-wrapper
   margin-top: 138px
-  width: 100vw
-  text-align: right
+  float: right
+  margin-right: 3px
   .slider
     display: inline-block
-    margin-right: 391px
     .slider-image-wrapper
       text-align: center
       height: 241px
@@ -335,12 +326,18 @@ body
       &:nth-child(1)
         .like-wrapper
           background-color: rgba(138,202,81,0.9)
+          &:hover
+            background-color: rgba(138,202,81,1)
+            transition: all 0.2s ease-out
           .like-button
             background-image: url("../img/main/slider/like-1.svg")
+        
       &:nth-child(2)
         .like-wrapper
           background-color: rgba(254,235,117,0.9)
-          
+          &:hover
+            background-color: rgba(254,235,117,1)
+            transition: all 0.2s ease-out
           .like-button
             color: #cc9800
             background-image: url("../img/main/slider/like-2.svg")
@@ -353,7 +350,12 @@ body
       background-position: center
       background-color: #f4f4f4
       cursor: pointer
+      transition: all 0.2s ease-out
+      &:hover
+        transition: all 0.2s ease-out
+        background-color: darken(#f4f4f4, 2%) 
     .like-wrapper
+      transition: all 0.2s ease-out
       position: absolute
       bottom: 0
       left: 0
@@ -380,11 +382,11 @@ body
   .section-title
     font-size: 26px
     font-weight: 700
-    color: #6d6e71
+    color: $font-color
   .section-article
     font-size: 16px
     font-weight: 300
-    color: #6d6e71
+    color: $font-color
   .about-wrapper
     padding-top: 26px
   .info-block
@@ -429,7 +431,7 @@ body
     background-repeat: no-repeat
     background-position: -3px 1px
     padding-left: 161px
-    color: #6d6e71
+    color: $font-color
     padding-bottom: 15px
     .title
       font-size: 44px
@@ -450,9 +452,15 @@ body
         background-repeat: no-repeat
         background-position: -1px 9px
         text-align: left
-        color: #6d6e71
+        color: $font-color
         .text-wrapper
           width: 387px
+          .feature-title
+            font-size: 24px
+            font-weight: 700
+          .feature-description
+            font-size: 16px
+            font-weight: 300
         
     .features-left
       position: relative
@@ -468,8 +476,8 @@ body
       .feature
         margin-bottom: 90px
         .text-wrapper
-          margin-left: 114px
-          .feature-description
+          margin-left: 114px     
+          .feature-description   
             padding-top: 13px
             line-height: 1.5
             word-spacing: 1px
@@ -535,7 +543,7 @@ body
       display: inline-block
       text-align: left
       letter-spacing: 0
-      color: #6d6e71
+      color: $font-color
       width: 508px
       background-image: url("../img/projects-section/hym.png")
       background-repeat: no-repeat
@@ -584,7 +592,7 @@ body
           background-color: #fff
           border: 2px solid #fff
           a
-            color: #6d6e71
+            color: $font-color
         a
           text-decoration: none
           font-size: 15px
@@ -627,7 +635,7 @@ body
             .share
               background-image: url("../img/projects-section/share.svg")
               background-repeat: no-repeat
-              background-position: center 18px
+              background-position: 60px 18px
               width: 50%
               height: 59px
               display: inline-block
@@ -643,18 +651,18 @@ body
             .more
               background-image: url("../img/projects-section/more.svg")
               background-repeat: no-repeat
-              background-position: 50px 16px
+              background-position: 52px 16px
               width: 50%
               height: 59px
               display: inline-block
 
 .site-footer
   background-color: #2b2c2d
-  height: 250px
+  height: 263px
   & *
     letter-spacing: 0px
   .footer-middle-line
-    padding-top: 90px
+    padding-top: 77px
     font-size: 0
     .footer-links
       margin-left: -4px
@@ -667,7 +675,7 @@ body
           border-right: 1px solid #3c3e3f
           height: 100%
           padding-left: 19px
-          padding-right: 18.9px
+          padding-right: 19px
           &:nth-child(1)
             a
               background-image: url("../img/footer/facebook.svg")
@@ -701,7 +709,8 @@ body
         background-image: url("../img/footer/contact.svg")
         background-repeat: no-repeat
         background-position: 20px center
-        
+        margin-top: 8px
+        margin-left: -11px
         &::after
           content: ""
           display: block
@@ -713,19 +722,20 @@ body
           font-size: 14px
           font-weight: 700 
           height: 100% 
-          color: #6d6e71
-          padding-left: 100px
+          color: $font-color
+          padding-left: 83px
           width: 70%
+          height: 100%
         .join
-          color: #6d6e71
+          color: $font-color
           text-decoration: none
           font-weight: 700
           font-size: 14px
           background-color: #494c4d
           border-radius: 7px
           float: right
-          padding: 10px 20px
-          margin-right: 10px
+          padding: 10px 24px
+          margin-right: 8px
           display: inline-block
           margin-top: 11px
   .footer-bottom-line
@@ -737,30 +747,34 @@ body
           a
   .footer-bottom-line
     font-size: 0
-    margin-top: 60px
+    margin-top: 62px
     .footer-copyright
       font-size: 13px
       font-weight: 300
-      color: #6d6e71
+      color: $font-color
     .site-map
       text-align: right
-      font-size: 14px
+      font-size: 13px
+      font-weight: 300
+      padding-right: 4px
       ul
         list-style-type: none
         li
           display: inline-block
           position: relative
-          margin-right: 10px
-          &:not(:last-child)::after
-            content: ""
-            position: absolute
-            bottom: 6px
-            width: 4px
-            height: 4px
-            right: -8px
-            background-color: #6d6e71
-            border-radius: 36em
+          &:not(:last-child)
+            margin-right: 17px
+            &::after
+              content: ""
+              position: absolute
+              bottom: 6px
+              width: 4px
+              height: 4px
+              right: -13px
+              background-color: $font-color
+              border-radius: 36em
           a
             text-decoration: none
-            color: #6d6e71
+            color: $font-color
+            
 @import "media" // Всегда в конце
