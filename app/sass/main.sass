@@ -600,61 +600,52 @@
           color: #bbbbbb
 
     .projects-portfolio
-      margin-top: 51px
-      margin-left: -8px
+      margin-top: 54px
+      margin-left: -2px
       &::after
         content: ""
         display: block
         clear: both
       .project
-        display: inline-block
-        vertical-align: top
         float: left
-        width: 25%   
-        text-align: center
-        margin-bottom: 9px
-        text-align: center
+        padding-bottom: 18px
+        &:nth-child(2)
+          padding-left: 3px
+        &:nth-child(3)
+          padding-left: 5px
+        &:nth-child(4)
+          padding-left: 9px
+        &:nth-child(6)
+          padding-left: 3px
+        &:nth-child(7)
+          padding-left: 5px
+        &:nth-child(8)
+          padding-left: 9px
+        width: 25%
         .project-wrapper
-          display: inline-block
           width: 278px
           height: 284px
-          background-color: #fff
-          border-radius: 4px
-          text-align: center
+          background-color: #ffffff
+          border-radius: 5px
+          padding-top: 16px
+          
           .image-wrapper
             width: 252px
             height: 209px
-            margin-top: 16px
             background-color: #f5f5f5
-            display: inline-block
+            margin-left: 14px
             border-radius: 4px
             overflow: hidden
-          .buttons-wrapper
-            height: 59px
-            margin-top: -7px
-            .share
-              background-image: url("../img/projects-section/share.svg")
-              background-repeat: no-repeat
-              background-position: 60px 18px
-              width: 50%
-              height: 59px
-              display: inline-block
-              position: relative
-              &::after
+            text-align: center
+            &::before
+                height: 100%
+                display: inline-block
+                vertical-align: middle
                 content: ""
-                position: absolute
-                width: 1px
-                height: 59px
-                right: 0px
-                background-color: #efefef
-
-            .more
-              background-image: url("../img/projects-section/more.svg")
-              background-repeat: no-repeat
-              background-position: 52px 16px
-              width: 50%
-              height: 59px
+            .project-image
+              
               display: inline-block
+              vertical-align: middle
 
 .site-footer
   background-color: #2b2c2d
